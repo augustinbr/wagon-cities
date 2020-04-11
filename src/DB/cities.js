@@ -7,7 +7,7 @@ const cities = [
   { name: "Montréal", address: "5333, avenue Casgrain, 102, Montréal (Québec), H2T1X3", slug: "montreal" },
   { name: "Tokyo", address: "2-11-3 Meguro, Meguro-ku, Tokyo ", slug: "tokyo" },
   { name: "Amsterdam", address: "Overhoeksplein 2, 1031 KS Amsterdam", slug: "amsterdam" },
-  { name: "Shanghai", address: "129 West Yan\"an Road, JingAn District, Shanghai", slug: "shanghai" },
+  { name: "Shanghai", address: "129 West Yan an Road, JingAn District, Shanghai", slug: "shanghai" },
   { name: "Brussels", address: "Place Sainte-Gudule 5, 1000 Brussels", slug: "brussels" },
   { name: "Lisbon", address: "Avenida Casal Ribeiro 28, Lisbon", slug: "lisbon" },
   { name: "Florianópolis", address: "Rod. José Carlos Daux, 4150 - Saco Grande, Florianópolis - SC, 88032-005", slug: "florianopolis" },

@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setCities } from '../actions/index';
+import { setCities } from '../actions';
 import City from '../containers/city';
 
 class CityList extends Component {
   componentWillMount() {
-    this.props.setCities();
-    alert(this.props.cities[9]);
+    console.log(this.props.cities[0]);
   }
 
   render() {
     return (
-
       <div className="col-sm-7">
         {this.props.cities.map(city =>
-          (<City city={city} key={city.name} />))}
+          (<City name={city.name} key={city.name} />))}
       </div>
     );
   }
@@ -28,11 +26,11 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapReduxStateToProps(reduxState) {
+function mapStateToProps(state) {
   return {
-    cities: reduxState.cities
+    cities: state.cities
   };
 }
 
 
-export default connect(mapReduxStateToProps, mapDispatchToProps)(CityList);
+export default connect(mapStateToProps, mapDispatchToProps)(CityList);
