@@ -11,16 +11,19 @@ body {
     width: 30%;
     margin-left: 119px;
     width: 30%;
-    border: solid 1px white;
     padding: 5px 30px;
     margin-bottom: 11px;
   }
+    img {
+      width:99%;
+      height: 81%;
+    }
   .active-city {
-    width: 70%;
-    margin-left: 20px;
+    width: 30%;
+    right: 127px;
     margin-bottom: 20px;
     padding: 10px 15px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 4px;
     h3 {
       margin-top: 0;
@@ -31,4 +34,8 @@ body {
 .list-group-item {
   background-color: transparent;
   cursor: pointer;
+}
+
+.selected_city {
+  border: solid red 2px;
 }

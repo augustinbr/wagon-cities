@@ -8,3 +8,11 @@ export function setCities() {
     payload: cities
   };
 }
+
+export function selectCity(selectedCity) {
+  return {
+    type: 'SELECT_CITY',
+    payload: selectedCity
+  };
+}
+
