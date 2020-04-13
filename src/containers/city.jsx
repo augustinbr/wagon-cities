@@ -6,13 +6,12 @@ import { selectCity } from '../actions';
 
 class City extends Component {
   componentWillMount() {
-    console.log();
   }
 
   render() {
     let classes = "cities";
     if (this.props.name === this.props.selectedCity) {
-      classes += " active-city";
+      classes += " selected_city";
     }
     return (
       <div className={classes} onClick={() => this.props.selectCity(this.props.name)}>

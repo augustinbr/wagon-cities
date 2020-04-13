@@ -4,15 +4,23 @@ import { bindActionCreators } from 'redux';
 import { selectCity } from '../actions';
 
 class ActiveCity extends Component {
-
   render() {
-    const src = `https://kitt.lewagon.com/placeholder/cities/${this.props.city.slug}`;
     return (
-      <div className="active-city col-sm-7">
-        <h1>{this.props.city.name}</h1>
-        <p>{this.props.city.address}</p>
-        <img src={src} alt={this.props.city.name} />
+      <div>
+        {this.props.cities.map((city) => {
+          if (city.name === this.props.selectedCity) {
+            return (
+              <div className="active-city col-sm-7" key={city.name}>
+                <h1>{city.name}</h1>
+                <p>{city.address}</p>
+                <img src={`https://kitt.lewagon.com/placeholder/cities/${city.slug}`} alt={city.name} />
+              </div>);
+          }
+        })
+        }
       </div>
+
+
     );
   }
 }
@@ -20,9 +28,8 @@ class ActiveCity extends Component {
 function mapStateToProps(state) {
   return {
     cities: state.cities,
-    selectedCity: state.city
+    selectedCity: state.selectedCity
   };
 }
 
 export default connect(mapStateToProps)(ActiveCity);
-
